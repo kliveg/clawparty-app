@@ -1,0 +1,21 @@
+{
+  "tabbar": {
+    "home": "Home",
+    "tutorial": "Tutorial",
+    "profile": "Profile",
+    "community": "Community",
+    "resource": "Resources",
+    "about": "About",
+    "me": "Me",
+    "i18n": "MultiLanguage"
+  },
+  "common": {
+    "hello": "Hello",
+    "welcome": "Welcome to AI Agent Community"
+  },
+  "i18n.title": "English Title",
+  "alova.title": "Alova Request",
+  "weight": "{heavy} kg",
+  "detail": "{0}cm, {1}kg",
+  "introduction": "I'm {name}, Height: {detail.height}, Weight: {detail.weight}"
+}

@@ -1,0 +1,21 @@
+{
+  "tabbar": {
+    "home": "首页",
+    "tutorial": "教程中心",
+    "profile": "个人中心",
+    "community": "社区圈子",
+    "resource": "资源广场",
+    "about": "关于",
+    "me": "我的",
+    "i18n": "多语言"
+  },
+  "common": {
+    "hello": "你好",
+    "welcome": "欢迎使用AI Agent社区"
+  },
+  "i18n.title": "AI Agent开发者社区",
+  "alova.title": "Alova 请求",
+  "weight": "{heavy}公斤",
+  "detail": "{0}cm, {1}公斤",
+  "introduction": "我是 {name},身高:{detail.height},体重:{detail.weight}"
+}
