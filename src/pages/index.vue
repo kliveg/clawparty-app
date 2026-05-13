@@ -16,7 +16,7 @@
 
     <!-- 2. 内容区域 -->
     <scroll-view class="content" scroll-y :style="{ paddingTop: navBarHeight + 'px' }">
-      
+
       <!-- 搜索框 -->
       <view class="search-box" @click="onSearchClick">
         <view class="search-input">
@@ -35,9 +35,13 @@
           :autoplay="true"
           :interval="3000"
           :duration="500"
+          circular
+          previous-margin="0"
+          next-margin="0"
         >
-          <swiper-item v-for="(item, index) in banners" :key="index">
+          <swiper-item v-for="(item, index) in banners" :key="item.id">
             <image :src="item.image" mode="aspectFill" class="banner-image"></image>
+            <view class="banner-title">{{ item.title }}</view>
           </swiper-item>
         </swiper>
       </view>
@@ -117,7 +121,7 @@ export default {
     // 计算导航栏高度
     const systemInfo = uni.getSystemInfoSync();
     this.navBarHeight = 44 + systemInfo.statusBarHeight;
-    
+
     // 获取数据
     this.fetchHomeData();
   },
@@ -126,11 +130,11 @@ export default {
       try {
         uni.showLoading({ title: '加载中...' });
         const res = await api.home.getHomeData();
-        if (res.code === 200) {
-          this.banners = res.data.banners || [];
-          this.recommends = res.data.recommends || [];
+        if (res) {
+          this.banners = res.banners || [];
+          this.recommends = res.recommends || [];
         } else {
-          uni.showToast({ title: res.message || '加载失败', icon: 'none' });
+          uni.showToast({ title: '加载失败', icon: 'none' });
         }
       } catch (error) {
         console.error('获取首页数据失败:', error);
@@ -203,10 +207,23 @@ export default {
         height: 300rpx;
         border-radius: 15rpx;
         overflow: hidden;
+        position: relative;
 
         .banner-image {
           width: 100%;
           height: 100%;
+        }
+
+        .banner-title {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.5);
+          color: white;
+          padding: 10rpx 20rpx;
+          font-size: 28rpx;
+          text-align: center;
         }
       }
     }
@@ -339,7 +356,7 @@ export default {
   .section {
     text-align: center;
     margin-bottom: 60rpx;
-    
+
     .section-title {
       display: block;
       font-size: 36rpx;
@@ -347,24 +364,24 @@ export default {
       color: #333;
       margin-bottom: 20rpx;
     }
-    
+
     .section-desc {
       font-size: 28rpx;
       color: #666;
     }
   }
-  
+
   .features {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20rpx;
-    
+
     .feature-card {
       background: white;
       border-radius: 16rpx;
       padding: 30rpx 20rpx;
       box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
-      
+
       .feature-title {
         display: block;
         font-size: 30rpx;
@@ -372,7 +389,7 @@ export default {
         color: #333;
         margin-bottom: 10rpx;
       }
-      
+
       .feature-desc {
         font-size: 24rpx;
         color: #666;

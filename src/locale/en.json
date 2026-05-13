@@ -1,7 +1,8 @@
 {
   "tabbar": {
     "home": "Home",
-    "tutorial": "Tutorial",
+    "tutorial": "Tutorial",    
+    "chatbot": "Chatbot",
     "profile": "Profile",
     "community": "Community",
     "resource": "Resources",
