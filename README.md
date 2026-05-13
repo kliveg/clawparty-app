@@ -84,7 +84,7 @@
 
 ## 演示示例
 
-<img src="./src/static/images/demo1.png" width="100%" />
+<img src="./src/static/images/demo.png" width="100%" />
 
 ## 商业需求
 
