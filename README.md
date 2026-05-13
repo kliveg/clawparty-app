@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">
-  <a href="https://github.com/kliveg/clawparty-app" target="_blank">AI Agent开发者社区</a>
+  <a href="https://github.com/zachary-sandbox/clawparty-app" target="_blank">AI Agent开发者社区</a>
 </h1>
 
 <div align="center">
@@ -14,14 +14,14 @@
 
 <div align="center">
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/kliveg/clawparty-app?style=flat&logo=github)](https://github.com/kliveg/clawparty-app)
-[![GitHub forks](https://img.shields.io/github/forks/kliveg/clawparty-app?style=flat&logo=github)](https://github.com/kliveg/clawparty-app)
-[![star](https://gitee.com/kliveg/clawparty-app/badge/star.svg?theme=dark)](https://gitee.com/kliveg/clawparty-app/stargazers)
-[![fork](https://gitee.com/kliveg/clawparty-app/badge/fork.svg?theme=dark)](https://gitee.com/kliveg/clawparty-app/members)
+[![GitHub Repo stars](https://img.shields.io/github/stars/zachary-sandbox/clawparty-app?style=flat&logo=github)](https://github.com/zachary-sandbox/clawparty-app)
+[![GitHub forks](https://img.shields.io/github/forks/zachary-sandbox/clawparty-app?style=flat&logo=github)](https://github.com/zachary-sandbox/clawparty-app)
+[![star](https://gitee.com/zachary-sandbox/clawparty-app/badge/star.svg?theme=dark)](https://gitee.com/zachary-sandbox/clawparty-app/stargazers)
+[![fork](https://gitee.com/zachary-sandbox/clawparty-app/badge/fork.svg?theme=dark)](https://gitee.com/zachary-sandbox/clawparty-app/members)
 ![node version](https://img.shields.io/badge/node-%3E%3D18-green)
 ![pnpm version](https://img.shields.io/badge/pnpm-%3E%3D7.30-green)
-![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/kliveg/clawparty-app)
-![GitHub License](https://img.shields.io/github/license/kliveg/clawparty-app)
+![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/zachary-sandbox/clawparty-app)
+![GitHub License](https://img.shields.io/github/license/zachary-sandbox/clawparty-app)
 
 </div>
 
@@ -82,6 +82,10 @@
 - weixin平台：`pnpm build:mp`, 打包后的文件在 `dist/build/mp-weixin`，然后通过微信开发者工具导入，并点击右上角的"上传"按钮进行上传。
 - APP平台：`pnpm build:app`, 然后打开 `HBuilderX`，导入刚刚生成的`dist/build/app` 文件夹，选择发行 - APP云打包。(如果是 `安卓` 和 `鸿蒙` 平台，则不用这个方式，可以把整个clawparty-app项目导入到hbx，通过hbx的菜单来发行到对应的平台。)
 
+## 演示示例
+
+<img src="./src/static/images/demo1.png" width="100%" />
+
 ## 商业需求
 
 ### 商业模式（前期免费，后期轻量化变现）
@@ -111,7 +115,7 @@
 
 [MIT](https://opensource.org/license/mit/)
 
-Copyright (c) 2025 菲鸽
+Copyright (c) 2025 zacharylee
 
 ## 关注我们
 

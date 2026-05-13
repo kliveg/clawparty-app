@@ -98,5 +98,6 @@
     "Wechat",
     "WechatMiniprogram",
     "Weixin"
-  ]
+  ],
+  "Lingma.aI Chat.mcpToolsInAgentMode": false
 }

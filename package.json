@@ -20,21 +20,21 @@
     "createdAt": "2026-05-11 10:50:29"
   },
   "packageManager": "pnpm@10.10.0",
-  "description": "unibest - 最好的 uniapp 开发模板",
-  "generate-time": "用户创建项目时生成",
+  "description": "zacharyl-sandbox - AI Agent开发社区",
+  "generate-time": "",
   "author": {
-    "name": "kleveg",
-    "zhName": "菲鸽",
-    "email": "kun6575@163.com",
+    "name": "zacharylee",
+    "zhName": "zacharylee",
+    "email": "zachary404@163.com",
     "github": "https://github.com/kleveg",
     "gitee": "https://gitee.com/kleveg"
   },
   "license": "MIT",
-  "homepage": "https://unibest.tech",
-  "repository": "https://github.com/kliveg/unibest",
+  "homepage": "https://zacharyl-sandbox.tech",
+  "repository": "https://github.com/zachary-sandbox/clawparty-app",
   "bugs": {
-    "url": "https://github.com/kliveg/unibest/issues",
-    "url-old": "https://github.com/codercup/unibest/issues"
+    "url": "https://github.com/zachary-sandbox/clawparty-app/issues",
+    "url-old": "https://github.com/zachary-sandbox/clawparty-app/issues"
   },
   "engines": {
     "node": ">=20",
@@ -214,6 +214,6 @@
     "unconfig": "7.3.2"
   },
   "lint-staged": {
-    "*": "echo 祝菲鸽身体健康"
+    "*": "echo 祝zacharylee身体健康"
   }
 }
