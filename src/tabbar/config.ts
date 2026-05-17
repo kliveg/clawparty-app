@@ -178,7 +178,21 @@ export const customTabbarList: CustomTabBarItem[] = [
     icon: '/static/tabbar/profile.svg',
     iconActive: '/static/tabbar/profile-active.svg',
   },
+  {
+    pagePath: 'pages/more/index',
+    text: '%tabbar.more%',
+    iconType: 'image',
+    icon: '/static/tabbar/more.svg',
+    iconActive: '/static/tabbar/more-active.svg',
+  },
 ]
+
+/**
+ * 获取更多页面的tabbar索引
+ */
+export const getMoreTabIndex = (): number => {
+  return customTabbarList.findIndex(item => item.pagePath === 'pages/more/index')
+}
 
 /**
  * 是否启用 tabbar 缓存

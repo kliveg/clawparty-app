@@ -34,6 +34,7 @@ const tokenInfoState = isDoubleTokenMode
 export const useTokenStore = defineStore(
   'token',
   () => {
+    console.log('初始化 token store，双token模式:', isDoubleTokenMode)
     // 定义用户信息
     const tokenInfo = ref<IAuthLoginRes>({ ...tokenInfoState })
 

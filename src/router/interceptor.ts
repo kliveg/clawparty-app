@@ -44,18 +44,6 @@ export const navigateToInterceptor = {
       path = `${baseDir}/${path}`
     }
 
-    // // 处理路由不存在的情况
-    // if (path !== '/' && !getAllPages().some(page => page.path === path)) {
-    //   console.warn('路由不存在:', path)
-    //   return false // 明确表示阻止原路由继续执行
-    // }
-
-    // // 插件页面
-    // if (url.startsWith('plugin://')) {
-    //   FG_LOG_ENABLE && console.log('路由拦截器 4: plugin:// 路径 ==>', url)
-    //   path = url
-    // }
-
     // 处理直接进入路由非首页时，tabbarIndex 不正确的问题
     tabbarStore.setAutoCurIdx(path)
 
@@ -143,3 +131,17 @@ export const routeInterceptor = {
     uni.addInterceptor('chooseLocation', chooseLocationInterceptor)
   },
 }
+
+// 定义需要登录的页面列表
+const requireAuthPages = [
+  '/pages/community/index',
+  '/pages/profile/index',
+  '/pages/resource/index',
+  '/pages/tutorial/index',
+  '/pages/chatbot/index',
+  // 添加其他需要登录的页面
+]
+
+// 从现有拦截器逻辑中移除Router相关代码，因为uni-app使用的是uni拦截器
+// 之前定义的requireAuthPages可以整合到现有的拦截器逻辑中
+// 如果需要更复杂的权限控制，可以修改现有的拦截器逻辑

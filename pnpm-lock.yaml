@@ -87,6 +87,12 @@ importers:
       pinia-plugin-persistedstate:
         specifier: 3.2.1
         version: 3.2.1(pinia@2.0.36(typescript@5.8.3)(vue@3.4.21(typescript@5.8.3)))
+      pnpm:
+        specifier: ^11.1.2
+        version: 11.1.2
+      uni-router:
+        specifier: ^0.1.4
+        version: 0.1.4
       vue:
         specifier: ^3.4.21
         version: 3.4.21(typescript@5.8.3)
@@ -7522,6 +7528,9 @@ packages:
   path-to-regexp@0.1.12:
     resolution: {integrity: sha512-RA1GjUVMnvYFxuqovrEqZoxxW5NUZqbwKtYz/Tt7nXerk0LbLblQmrsgdeOxV5SFHf0UDggjS/bSeOZwt1pmEQ==}
 
+  path-to-regexp@1.9.0:
+    resolution: {integrity: sha512-xIp7/apCFJuUHdDLWe8O1HIkb0kQrOMb/0u6FXQjemHn/ii5LrIzU6bdECnsiTF/GjZkMEKg1xdiZwNqDYlZ6g==}
+
   path-type@4.0.0:
     resolution: {integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==}
     engines: {node: '>=8'}
@@ -7649,6 +7658,11 @@ packages:
 
   pnpm-workspace-yaml@1.2.0:
     resolution: {integrity: sha512-4CnZHmLSaprRnIm2iQ27Zl1cWPRHdX7Ehw7ckRwujoPKCk2QAz4agsA2MbTodg4sgbqYfJ68ULT+Q5A8dU+Mow==}
+
+  pnpm@11.1.2:
+    resolution: {integrity: sha512-QVocwll0cx51RVwUaDcb50xapft2IbUNQFbSIkUWCfEUEvI/1gLmFp8eBgRmZB95hZfhvpYaEGiINqZ7FlaUmQ==}
+    engines: {node: '>=22.13'}
+    hasBin: true
 
   possible-typed-array-names@1.1.0:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
@@ -8903,6 +8917,14 @@ packages:
 
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+
+  uni-compose@0.1.2:
+    resolution: {integrity: sha512-rE62wri4Onrvoog0w64jmDp0MJK+n0wVb/QiPxbVKoKnTz2Altz3vPbn9KXIBOVD/SJO9bf4Aa+akPDNZaN/MA==}
+    engines: {node: '>= 4'}
+
+  uni-router@0.1.4:
+    resolution: {integrity: sha512-VO1eQuLV0lI8K7xw5QlD9jxd/vg8LfUlF02oJ8ij8or9d9ao3SxJTIG2NqzBflfvuimXRwXzdp5Iixu3lrWbAA==}
+    engines: {node: '>= 4'}
 
   unicode-canonical-property-names-ecmascript@2.0.1:
     resolution: {integrity: sha512-dA8WbNeb2a6oQzAQ55YlT5vQAWGV9WXOsi3SskE3bcCdM0P4SDd+24zS/OCacdRq5BkdsRj9q3Pg6YyQoxIGqg==}
@@ -19657,6 +19679,10 @@ snapshots:
 
   path-to-regexp@0.1.12: {}
 
+  path-to-regexp@1.9.0:
+    dependencies:
+      isarray: 0.0.1
+
   path-type@4.0.0: {}
 
   pathe@1.1.2: {}
@@ -19754,6 +19780,8 @@ snapshots:
   pnpm-workspace-yaml@1.2.0:
     dependencies:
       yaml: 2.8.1
+
+  pnpm@11.1.2: {}
 
   possible-typed-array-names@1.1.0: {}
 
@@ -21073,6 +21101,13 @@ snapshots:
       quansync: 0.2.11
 
   undici-types@6.21.0: {}
+
+  uni-compose@0.1.2: {}
+
+  uni-router@0.1.4:
+    dependencies:
+      path-to-regexp: 1.9.0
+      uni-compose: 0.1.2
 
   unicode-canonical-property-names-ecmascript@2.0.1: {}
 

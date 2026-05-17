@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import { useRouter } from 'uni-router'
+import { useTokenStore } from '@/store/token'
+
 defineOptions({
   name: 'Home',
 })
@@ -12,6 +15,8 @@ definePage({
   },
 })
 
+const router = useRouter()
+const tokenStore = useTokenStore()
 const slogan = ref('从零搭建智能Bot，汇聚AI开发者同好')
 const description = ref(
   '垂直AI Agent开发者社区，面向本地大模型、智能Bot（Hermes/OpenClaw）搭建爱好者。提供教程、资源、社区问答、工具集服务，解决新手部署报错、资源难找问题。',
@@ -20,6 +25,11 @@ console.log('AI Agent社区首页加载完成')
 
 onLoad(() => {
   console.log('测试 uni API 自动引入: onLoad')
+  
+  // 检查用户是否已登录，如果没有则跳转到登录页
+  if (!tokenStore.hasLogin) {
+    router.push('/pages/auth/login')
+  }
 })
 </script>
 
